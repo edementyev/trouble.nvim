@@ -18,6 +18,9 @@ function M.jump_to_item(win, precmd, item)
   if win == nil then
     win = 0
   end
+  if win == nil then
+    win = 0
+  end
   vim.api.nvim_win_set_cursor(win, { item.start.line + 1, item.start.character })
 end
 
